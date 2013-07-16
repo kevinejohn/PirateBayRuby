@@ -18,15 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-Install:
-
-	gem install pirate_bay_ruby
-
 Search:
 
 	pirate_bay_ruby.rb search "Ubuntu"
 
-Download:
+Download searched number:
 
 	pirate_bay_ruby.rb search "Ubuntu" 1
 
