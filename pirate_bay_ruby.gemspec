@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = ""
   spec.license       = "MIT"
 
-  spec.add_dependency "nokogiri"
+  spec.add_dependency "nokogiri", "~1.6.0"
+  spec.add_dependency "commander", "~> 4.1"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
