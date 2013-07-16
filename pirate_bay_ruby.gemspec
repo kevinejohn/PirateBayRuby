@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kevin Johnson"]
   spec.email         = ["kevinejohn@gmail.com"]
   spec.description   = "Search The Pirate Bay from the terminal"
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = "Quick Pirate Bay Search"
   spec.homepage      = ""
   spec.license       = "MIT"
 

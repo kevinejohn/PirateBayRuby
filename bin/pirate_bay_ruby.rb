@@ -16,7 +16,7 @@ program :help_formatter, :compact
 
 default_command :help
 
-command :push do |c|
+command :search do |c|
   c.syntax = 'pirate_bay_ruby search [...]'
   c.summary = 'Searches the pirate bay'
   c.description = ''
@@ -29,14 +29,14 @@ command :push do |c|
     @environment = options.environment.downcase.to_sym rescue :development
     say_error "Invalid environment,'#{@environment}' (should be either :development or :production)" and abort unless [:development, :production].include?(@environment)
 
-    if options.search
-      begin
-        search
-      rescue => message
-        say_error "Exception: #{message}" and abort
-      end
+    if args.count == 1
+      PirateBayRuby.search(args[0])
+    elsif args.count == 2
+      PirateBayRuby.search(args[0], args[1])
+    else
+      say_error "Invalid number of arguments" and abort 
     end
 
-    say_ok "Searched"
+    say_ok "Done"
   end
 end

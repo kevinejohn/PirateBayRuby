@@ -7,6 +7,8 @@ module PirateBayRuby
   #module_function
 
   def self.search(name, number=0)
+    number = number.to_i
+
 	  doc = Nokogiri::HTML(open("http://thepiratebay.sx/search/#{URI.escape(name)}/0/7/0"))
     
     cnt = 1
@@ -26,8 +28,6 @@ module PirateBayRuby
         end
       end
 
-	    #puts "Row: #{row}"
-      
       if number == 0
         puts "#{cnt}:\t#{name.text}"
       elsif cnt == number
