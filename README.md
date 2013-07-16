@@ -1,20 +1,6 @@
 # PirateBayRuby
 
-Install:
-
-	gem install pirate_bay_ruby
-
-Search:
-
-	pirate_bay_ruby.rb search "Ubuntu"
-
-Download:
-
-	pirate_bay_ruby.rb search "Ubuntu" 1
-
-
-Sorts searches by descending seeder count
-
+Quick CLI to search and download from the pirate bay
 
 ## Installation
 
@@ -32,7 +18,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Install:
+
+	gem install pirate_bay_ruby
+
+Search:
+
+	pirate_bay_ruby.rb search "Ubuntu"
+
+Download:
+
+	pirate_bay_ruby.rb search "Ubuntu" 1
+
+
+Sorts searches by descending seeder count
 
 ## Contributing
 
