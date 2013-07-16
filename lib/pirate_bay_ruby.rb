@@ -16,17 +16,27 @@ module PirateBayRuby
       name = row.search('a.detLink')
       next if name.empty? # Skip empty names
 
+      temp = row.search('font.detDesc').text
+      match = temp.match /Uploaded (.*), ULed by .*/
+      description = match[1]
+
+      temp = row.search('td')
+      seeders = temp[2].text unless temp[2].nil?
+      leechers = temp[3].text unless temp[3].nil?
+
+
       magnet_link = ""
       row.search('a').each do |a|
-        if a["title"] == "Download this torrent using magnet"
+        if a["href"].match /^magnet.*/
           magnet_link = a["href"]
           break
         end
       end
 
+
       if number == 0
         # Print to screen
-        puts "#{cnt}:\t#{name.text}"
+        puts "#{cnt}:\tSE #{seeders}, LE #{leechers}, Date #{description}\t\t#{name.text}"
       elsif cnt == number
         # Download
         puts "Downloading:   #{name.text}"
