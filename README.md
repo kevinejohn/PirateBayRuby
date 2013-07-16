@@ -13,7 +13,8 @@ Download:
 	pirate_bay_ruby.rb search "Ubuntu" 1
 
 
-Sorts all searches by highest seeder count
+Sorts searches by descending seeder count
+
 
 ## Installation
 
