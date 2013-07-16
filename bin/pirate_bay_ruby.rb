@@ -17,7 +17,7 @@ program :help_formatter, :compact
 default_command :help
 
 command :search do |c|
-  c.syntax = 'pirate_bay_ruby search [...]'
+  c.syntax = 'pirate_bay_ruby search "Ubuntu"'
   c.summary = 'Searches the pirate bay'
   c.description = ''
 

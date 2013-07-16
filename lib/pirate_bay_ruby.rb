@@ -12,15 +12,11 @@ module PirateBayRuby
 	  doc = Nokogiri::HTML(open("http://thepiratebay.sx/search/#{URI.escape(name)}/0/7/0"))
     
     cnt = 1
-	  doc.xpath('//*[@id="searchResult"]').search('tr').each do |row|  #//*[@id="searchResult"]/tbody/tr[1]/td[2]/div/a
-
+	  doc.xpath('//*[@id="searchResult"]').search('tr').each do |row|
       name = row.search('a.detLink')
-      if name.length == 0
-        next
-      end
+      next if name.empty? # Skip empty names
 
       magnet_link = ""
-
       row.search('a').each do |a|
         if a["title"] == "Download this torrent using magnet"
           magnet_link = a["href"]
@@ -29,9 +25,10 @@ module PirateBayRuby
       end
 
       if number == 0
+        # Print to screen
         puts "#{cnt}:\t#{name.text}"
       elsif cnt == number
-        # Found download
+        # Download
         puts "Downloading:   #{name.text}"
         `open #{magnet_link}`
         break
