@@ -6,11 +6,11 @@ Install:
 
 Search:
 
-	pirate_bay_ruby.rb "Ubuntu"
+	pirate_bay_ruby.rb search "Ubuntu"
 
 Download:
 
-	pirate_bay_ruby.rb "Ubuntu" 1
+	pirate_bay_ruby.rb search "Ubuntu" 1
 
 
 Sorts all searches by highest seeder count
