@@ -21,7 +21,7 @@ command :search do |c|
   c.summary = 'Searches the pirate bay'
   c.description = ''
 
-  c.example 'description', 'pirate_bay_ruby search "Mad Men"'
+  c.example 'description', 'pirate_bay_ruby search "Ubuntu'
 
   c.action do |args, options|
     say_error "One or more arguments required" and abort if args.empty?
