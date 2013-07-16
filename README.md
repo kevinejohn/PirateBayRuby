@@ -1,6 +1,19 @@
 # PirateBayRuby
 
-TODO: Write a gem description
+Install:
+
+	gem install pirate_bay_ruby
+
+Search:
+
+	pirate_bay_ruby.rb "Ubuntu"
+
+Download:
+
+	pirate_bay_ruby.rb "Ubuntu" 1
+
+
+Sorts all searches by highest seeder count
 
 ## Installation
 
