@@ -7,10 +7,11 @@ module PirateBayRuby
   #module_function
 
   def self.search(name, number=0)
+    return if name.nil?
     number = number.to_i
 
 	  doc = Nokogiri::HTML(open("http://thepiratebay.sx/search/#{URI.escape(name)}/0/7/0"))
-    
+
     cnt = 1
 	  doc.xpath('//*[@id="searchResult"]').search('tr').each do |row|
       name = row.search('a.detLink')
@@ -43,7 +44,7 @@ module PirateBayRuby
         `open #{magnet_link}`
         break
       end
-        
+
       cnt = cnt + 1
 	  end
 
