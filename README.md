@@ -20,11 +20,11 @@ Or install it yourself as:
 
 Search:
 
-	pirate_bay_ruby.rb search "Ubuntu"
+	pirate_bay_ruby.rb "Ubuntu"
 
 Download searched number:
 
-	pirate_bay_ruby.rb search "Ubuntu" 1
+	pirate_bay_ruby.rb "Ubuntu" 1
 
 
 Sorts searches by descending seeder count
