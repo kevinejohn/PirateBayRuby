@@ -1,18 +1,8 @@
 # PirateBayRuby
 
-Quick CLI to search and download from the pirate bay
+Quick CLI to search and download magnet links from the pirate bay
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'pirate_bay_ruby'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install pirate_bay_ruby
 
@@ -20,11 +10,11 @@ Or install it yourself as:
 
 Search:
 
-	pirate_bay_ruby.rb search "Ubuntu"
+	pirate_bay_ruby.rb "Ubuntu"
 
 Download searched number:
 
-	pirate_bay_ruby.rb search "Ubuntu" 1
+	pirate_bay_ruby.rb "Ubuntu" 1
 
 
 Sorts searches by descending seeder count
