@@ -10,7 +10,7 @@ module PirateBayRuby
     return if name.nil?
     number = number.to_i
 
-	  doc = Nokogiri::HTML(open("http://thepiratebay.org/search/#{URI.escape(name)}/0/7/0"))
+	  doc = Nokogiri::HTML(open("https://thepiratebay.se/search/#{URI.escape(name)}/0/7/0"))
 
     cnt = 1
 	  doc.xpath('//*[@id="searchResult"]').search('tr').each do |row|
